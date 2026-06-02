@@ -1,0 +1,175 @@
+/* ====================================================
+   styles.css – สไตล์ “สะอาดตา”, รองรับมือถือ
+   ==================================================== */
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+/* ---------- Layout ---------- */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.section {
+  margin-bottom: 2rem;
+}
+.hidden {
+  display: none;
+}
+
+/* ---------- Header / Footer ---------- */
+.site-header,
+.site-footer {
+  background: #0d47a1;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+.site-header h1 {
+  font-size: 1.8rem;
+}
+
+/* ---------- Product Grid ---------- */
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.product-card {
+  background: #fff;
+  border-radius: 0.8rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,.1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform .2s;
+}
+.product-card:hover {
+  transform: translateY(-3px);
+}
+.product-card img {
+  max-width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+.product-card h3 {
+  margin: .5rem 0;
+  font-size: 1.2rem;
+}
+.product-card .desc {
+  flex-grow: 1;
+  margin: .5rem 0;
+  color: #555;
+}
+.product-card .price {
+  font-weight: 600;
+  margin: .5rem 0;
+  color: #e53935;
+}
+.product-card button {
+  margin-top: .5rem;
+}
+
+/* ---------- Cart Table ---------- */
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.cart-table th,
+.cart-table td {
+  border-bottom: 1px solid #ddd;
+  padding: .6rem;
+  text-align: left;
+}
+.cart-table td:last-child {
+  text-align: right;
+}
+.total {
+  font-size: 1.2rem;
+  text-align: right;
+  margin-top: .8rem;
+}
+
+/* ---------- Forms ---------- */
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  margin-top: 1rem;
+}
+.checkout-form input,
+.checkout-form select,
+.checkout-form textarea {
+  padding: .6rem;
+  border: 1px solid #bbb;
+  border-radius: .4rem;
+  font-size: .95rem;
+  width: 100%;
+}
+.checkout-form input:focus,
+.checkout-form select:focus,
+.checkout-form textarea:focus {
+  outline: none;
+  border-color: #1976d2;
+}
+.radio-group {
+  margin: .5rem 0;
+  display: inline-block;
+  font-weight: 500;
+}
+.radio-group input {
+  margin-right: .4rem;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #1976d2;
+  color: #1976d2;
+  padding: .6rem 1rem;
+  border-radius: .4rem;
+  font-weight: 600;
+  transition: background .2s, color .2s;
+}
+.btn:hover {
+  background: #1976d2;
+  color: #fff;
+}
+.btn.primary {
+  background: #1976d2;
+  color: #fff;
+}
+.btn.primary:hover {
+  background: #0d47a1;
+}
+
+/* ---------- File input style ---------- */
+.file-label {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  font-weight: 500;
+}
+.file-label input[type="file"] {
+  border: none;
+}
+
+/* ---------- Responsiveness ---------- */
+@media (max-width: 600px) {
+  .site-header h1 {font-size: 1.5rem;}
+  .grid {grid-template-columns: 1fr;}
+}

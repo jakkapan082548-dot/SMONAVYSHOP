@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ร้านค้าออนไลน์</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1 class="title">🛍️ ร้านค้าออนไลน์</h1>
+    <button id="cartBtn" class="cart-btn">🛒 <span id="cartCount">0</span></button>
+  </header>
+
+  <main id="mainContent" class="main">
+    <!-- Product list will be injected here -->
+  </main>
+
+  <!-- Cart / Checkout Modal -->
+  <div id="modalOverlay" class="modal-overlay hidden">
+    <div class="modal">
+      <button id="closeModal" class="close-btn">✖</button>
+      <div id="modalBody">
+        <!-- Dynamic content (cart or checkout) -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
